@@ -29,10 +29,10 @@ public class Order {
 	private Long id;
 
 	@ManyToMany(targetEntity = Pizza.class)
-	private List<Pizza> tacos = new ArrayList<>();
+	private List<Pizza> pizzas = new ArrayList<>();
 
 	public void addDesign(Pizza design) {
-		this.tacos.add(design);
+		this.pizzas.add(design);
 	}
 
 	private Date placedAt;

@@ -20,9 +20,9 @@ import lombok.extern.slf4j.Slf4j;
 import pizzas.dao.IngredientRepository;
 import pizzas.dao.PizzaRepository;
 import pizzas.data.Ingredient;
+import pizzas.data.Ingredient.Type;
 import pizzas.data.Order;
 import pizzas.data.Pizza;
-import pizzas.data.Ingredient.Type;
 
 @Slf4j
 @Controller
@@ -38,6 +38,16 @@ public class DesignPizzaController {
 	public DesignPizzaController(IngredientRepository ingredientRepo, PizzaRepository pizzaRepo) {
 		this.ingredientRepo = ingredientRepo;
 		this.pizzaRepo = pizzaRepo;
+	}
+
+	@ModelAttribute(name = "order")
+	public Order order() {
+		return new Order();
+	}
+
+	@ModelAttribute(name = "design")
+	public Pizza design() {
+		return new Pizza();
 	}
 
 	@GetMapping
