@@ -1,7 +1,7 @@
-delete from Pizza_Ingredients; 
-delete from Pizza;
-delete from Pizza_Order;
-delete from Ingredient;
+--delete from Pizza_Ingredients; 
+--delete from Pizza;
+--delete from Pizza_Order;
+--delete from Ingredient;
 
 insert into Ingredient (id, name, type) values ('FLTO', 'Flour Tortilla', 0);
 insert into Ingredient (id, name, type) values ('COTO', 'Corn Tortilla', 0);
